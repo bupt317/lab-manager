@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.bupt317.study.lab_manager.mapper.UserMapper">
+
+    <select id="selectbyusername" parameterType="java.lang.String" resultType="com.bupt317.study.lab_manager.pojo.mybatis.User">
+        SELECT * FROM user WHERE username=#{value}
+    </select>
+
+    <insert id="insertuser" parameterType="com.bupt317.study.lab_manager.pojo.mybatis.User">
+        INSERT INTO user(authority,username,password) VALUE(#{authority},#{username},#{password})
+    </insert>
+
+    <delete id="deletebyid" parameterType="java.lang.Integer">
+        DELETE FROM user WHERE id=#{id}
+    </delete>
+
+    <update id="updatebyid" parameterType="com.bupt317.study.lab_manager.pojo.mybatis.User">
+        UPDATE user SET authority=#{authority},password=#{password} WHERE id=#{id}
+    </update>
+
+</mapper>
