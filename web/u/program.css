@@ -90,6 +90,7 @@ body{
     top: 35px;
     left: 200px;
     display: block;
+    color: black;
 }
 .new img{
     position: absolute;
