@@ -1,0 +1,125 @@
+body{
+    margin: 0;
+}
+.background img{
+    position: relative;
+    width: 1536px;
+    height: 1023px;
+}
+.guide{
+    position: absolute;
+    height: 60px;
+    width: 1536px;
+    top: 0;
+    left: 0;
+    text-align: center;
+    line-height: 60px;
+    font-size: 28px;
+    background-color: rgba(255, 255, 255, 0.6);
+}
+.home_logo{
+    position: absolute;
+    width: 60px;
+    height: 60px;
+    top: 0px;
+    left: 10px;
+}
+.home_logo img{
+    position: absolute;
+    width: 24px;
+    height: 24px;
+    top: 10px;
+    left: 18px;
+}
+.home_logo span{
+    position: absolute;
+    font-size: 12px;
+    width: 24px;
+    height: 10px;
+    top: 14px;
+    left: 18px;
+}
+.logout_logo{
+    position: absolute;
+    width: 60px;
+    height: 60px;
+    top: 0px;
+    left: 60px;
+}
+.logout_logo img{
+    position: absolute;
+    width: 24px;
+    height: 24px;
+    top: 10px;
+    left: 18px;
+}
+.logout_logo span{
+    position: absolute;
+    font-size: 12px;
+    width: 24px;
+    height: 10px;
+    top: 14px;
+    left: 18px;
+}
+.guide a:link, a:visited{
+    display: block;
+    text-decoration: none;
+    color: black;
+    font-size: 20px;
+}
+.programList{
+    background-color: rgba(255, 255, 255, 0.6);
+    position: absolute;
+    width: 1000px;
+    height: 600px;
+    top: 120px;
+    left: 268px;
+}
+.programList_title{
+    position: absolute;
+    width: 1000px;
+    height: 30px;
+    background-color: white;
+    text-align: center;
+    line-height: 30px;
+}
+.new{
+    position: absolute;
+    width: 100px;
+    height: 30px;
+    top: 35px;
+    left: 200px;
+    display: block;
+}
+.new img{
+    position: absolute;
+    width: 24px;
+    height: 24px;
+    top: 3px;
+    left: 0px;
+    line-height: 30px;
+}
+.new span{
+    position: absolute;
+    top: 0;
+    left: 25px;
+    line-height: 30px;
+}
+.programList_content{
+    position: absolute;
+    width: 600px;
+    height: 200px;
+    background-color: white;
+    top: 70px;
+    left: 200px;
+}
+.programList_content .alter{
+    position: absolute;
+    top: 170px;
+    left: 450px;
+}
+.programList_content .graph{
+    position: absolute;
+    top: 170px;
+    left: 510px;
+}

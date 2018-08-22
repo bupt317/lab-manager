@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>项目管理</title>
+    <link rel="stylesheet" type="text/css" href="program.css">
+    <script>
+        function loadXMLDoc() {
+            var xmlhttp = new XMLHttpRequest();
+            xmlhttp.onreadystatechange=function () {
+                if (xmlhttp.readyState == 4 && xmlhttp.status == 200)
+                {
+                    var obj = JSON.parse(xmlhttp.responseText);
+                    document.getElementById("project").innerHTML = obj.project;
+                    document.getElementById("member").innerHTML = obj.member;
+                    document.getElementById("message").innerHTML = obj.message;
+                    document.getElementById("end").innerHTML = obj.end;
+                    document.getElementById("state").innerHTML = obj.state;
+                }
+            };
+            xmlhttp.open("GET","/u/program/data.json", true);
+            xmlhttp.send();
+        }
+    </script>
+</head>
+<body>
+<div class="background">
+    <img src="/picture/background.jpg">
+
+    <div class="guide">
+        欢迎使用317财务管理系统
+        <a href="home.html">
+            <div class="home_logo">
+                <img src="/picture/home_logo.png">
+                <span>主页</span>
+            </div>
+        </a>
+
+        <a href="login.html">
+            <div class="logout_logo">
+                <img src="/picture/exit_logo.png">
+                <span>退出</span>
+            </div>
+        </a>
+    </div>
+
+    <div class="programList">
+        <div class="programList_title">项目管理</div>
+
+        <a href="program/new.html">
+            <div class="new">
+                <img src="/picture/add_logo.png">
+                <span>新建项目</span>
+            </div>
+        </a>
+
+        <div class="programList_content" id="content">
+            <ul class="list">
+                <li>
+                    项目名称：<span id="project"></span>
+                </li>
+                <li>
+                    参与人员：<span id="member"></span>
+                </li>
+                <li>
+                    项目信息：<span id="message"></span>
+                </li>
+                <li>
+                    项目期限：<span id="end"></span>
+                </li>
+                <li>
+                    项目状态：<span id="state"></span>
+                </li>
+            </ul>
+            <button class="alter" onclick="window.location.href='/u/program/alter.html'">修改</button>
+            <button class="graph" onclick="window.location.href='/u/program/graph.html'">花销图表</button>
+        </div>
+    </div>
+</div>
+<script>
+    loadXMLDoc();
+</script>
+</body>
+</html>
