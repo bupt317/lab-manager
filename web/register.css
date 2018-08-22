@@ -1,0 +1,73 @@
+.background{
+    width: 1024px;
+    height: 705px;
+    position: relative;
+    margin: auto auto;
+}
+.register_bk{
+    height: 280px;
+    width: 400px;
+    background-color: rgba(255,255,255,0.6);
+    position: absolute;
+    left: 580px;
+    top: 270px;
+}
+.title {
+    width: 140px;
+    height: 40px;
+    font-size: 28px;
+    text-align: center;
+    position: absolute;
+    left: 130px;
+    top: 15px;
+}
+.name{
+    width: 200px;
+    text-align: center;
+    font-size: 14px;
+    position: absolute;
+    left: 100px;
+    top: 75px;
+}
+.userid{
+    width: 200px;
+    text-align: center;
+    font-size: 14px;
+    position: absolute;
+    left: 100px;
+    top: 117px;
+}
+.password{
+    width: 200px;
+    text-align: center;
+    font-size: 14px;
+    position: absolute;
+    left: 100px;
+    top: 157px;
+}
+.re_pass{
+    font-size: 14px;
+    position: absolute;
+    left: 55px;
+    top: 197px;
+}
+.button {
+    width: 200px;
+    font-size: 14px;
+    text-align: center;
+    position: absolute;
+    left: 50px;
+    top: 237px;
+}
+div.logo img{
+    width: 400px;
+    height: 120px;
+    position:absolute;
+    top: 50px;
+    left:50px;
+}
+.back_button{
+    position: absolute;
+    top: 237px;
+    right: 110px;
+}

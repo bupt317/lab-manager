@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>修改项目信息</title>
+    <link rel="stylesheet" type="text/css" href="alter.css">
+    <script>
+
+    </script>
+</head>
+<body>
+<div class="background">
+    <img src="/picture/background.jpg">
+
+    <div class="guide">
+        欢迎使用317财务管理系统
+        <a href="../home.html">
+            <div class="home_logo">
+                <img src="/picture/home_logo.png">
+                <span>主页</span>
+            </div>
+        </a>
+
+        <a href="../login.html">
+            <div class="logout_logo">
+                <img src="/picture/exit_logo.png">
+                <span>退出</span>
+            </div>
+        </a>
+    </div>
+
+    <div class="programalter">
+        <div class="programalter_title">修改项目信息</div>
+        <form>
+            <div>
+                <div class="programalter_start">
+                    起始日期：
+                    <select>
+                        <option value="year" selected="selected">2018</option>
+                        <option value="year">2019</option>
+                        <option value="year">2020</option>
+                    </select> &nbsp; 年 &nbsp;
+                    <select>
+                        <option value="month">1</option>
+                        <option value="month">2</option>
+                        <option value="month">3</option>
+                        <option value="month">4</option>
+                        <option value="month">5</option>
+                        <option value="month">6</option>
+                        <option value="month">7</option>
+                        <option value="month">8</option>
+                        <option value="month">9</option>
+                        <option value="month">10</option>
+                        <option value="month">11</option>
+                        <option value="month">12</option>
+                    </select> &nbsp; 月 &nbsp;
+                    <select>
+                        <option value="day">1</option>
+                        <option value="day">2</option>
+                        <option value="day">3</option>
+                        <option value="day">4</option>
+                        <option value="day">5</option>
+                        <option value="day">6</option>
+                        <option value="day">7</option>
+                        <option value="day">8</option>
+                        <option value="day">9</option>
+                        <option value="day">10</option>
+                        <option value="day">11</option>
+                        <option value="day">12</option>
+                        <option value="day">13</option>
+                        <option value="day">14</option>
+                        <option value="day">15</option>
+                        <option value="day">16</option>
+                        <option value="day">17</option>
+                        <option value="day">18</option>
+                        <option value="day">19</option>
+                        <option value="day">20</option>
+                        <option value="day">21</option>
+                        <option value="day">22</option>
+                        <option value="day">23</option>
+                        <option value="day">24</option>
+                        <option value="day">25</option>
+                        <option value="day">26</option>
+                        <option value="day">27</option>
+                        <option value="day">28</option>
+                        <option value="day">29</option>
+                        <option value="day">30</option>
+                        <option value="day">31</option>
+                    </select> &nbsp; 日 &nbsp;
+                </div>
+            </div>
+            <div class="programalter_end">
+                项目期限：
+                <select>
+                    <option value="year" selected="selected">2018</option>
+                    <option value="year">2019</option>
+                    <option value="year">2020</option>
+                </select> &nbsp; 年 &nbsp;
+                <select>
+                    <option value="month">1</option>
+                    <option value="month">2</option>
+                    <option value="month">3</option>
+                    <option value="month">4</option>
+                    <option value="month">5</option>
+                    <option value="month">6</option>
+                    <option value="month">7</option>
+                    <option value="month">8</option>
+                    <option value="month">9</option>
+                    <option value="month">10</option>
+                    <option value="month">11</option>
+                    <option value="month">12</option>
+                </select> &nbsp; 月 &nbsp;
+                <select>
+                    <option value="day">1</option>
+                    <option value="day">2</option>
+                    <option value="day">3</option>
+                    <option value="day">4</option>
+                    <option value="day">5</option>
+                    <option value="day">6</option>
+                    <option value="day">7</option>
+                    <option value="day">8</option>
+                    <option value="day">9</option>
+                    <option value="day">10</option>
+                    <option value="day">11</option>
+                    <option value="day">12</option>
+                    <option value="day">13</option>
+                    <option value="day">14</option>
+                    <option value="day">15</option>
+                    <option value="day">16</option>
+                    <option value="day">17</option>
+                    <option value="day">18</option>
+                    <option value="day">19</option>
+                    <option value="day">20</option>
+                    <option value="day">21</option>
+                    <option value="day">22</option>
+                    <option value="day">23</option>
+                    <option value="day">24</option>
+                    <option value="day">25</option>
+                    <option value="day">26</option>
+                    <option value="day">27</option>
+                    <option value="day">28</option>
+                    <option value="day">29</option>
+                    <option value="day">30</option>
+                    <option value="day">31</option>
+                </select> &nbsp; 日 &nbsp;
+            </div>
+
+            <div class="programalter_name">
+                项目名称：<input type="text" name="Project" size="35">
+            </div>
+
+            <div class="programalter_member">
+                参与人员：<input type="text" name="member" size="35">
+            </div>
+            <div class="programalter_message">
+                项目信息：
+                <textarea name="message" style="width: 395px; height: 144px; resize: none"></textarea>
+            </div>
+            <div class="programalter_state">
+                项目状态：
+                &nbsp; &nbsp;&nbsp;
+                未结项 <input type="radio"  name="state">
+                &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;
+                已结项 <input type="radio"  name="state">
+            </div>
+            <div class="programalter_button">
+                <input type="submit" value="保存" style="position: absolute; left: 110px">
+            </div>
+        </form>
+        <button class="cancel" onclick="window.location.href='/u/program.html'">取消</button>
+    </div>
+</div>
+</body>
+</html>

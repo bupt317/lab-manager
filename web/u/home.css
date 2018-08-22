@@ -1,0 +1,120 @@
+body{
+    margin: 0;
+}
+.background img{
+    position: relative;
+    width: 1536px;
+    height: 723px;
+}
+.logo img{
+    position: absolute;
+    top: 10px;
+    left: 10px;
+    width: 400px;
+    height: 120px;
+}
+.welcome{
+    background-color: rgba(255,255,255,0.6);
+    position: absolute;
+    height: 130px;
+    width: 503px;
+    top: 200px;
+    left: 268px;
+    text-align: center;
+    font-size: 28px;
+    line-height: 130px;
+}
+.logout{
+    background-color: rgba(255,255,255,0.6);
+    position: absolute;
+    height: 130px;
+    width: 251px;
+    top: 331px;
+    left: 268px;
+    text-align: center;
+    line-height: 130px;
+}
+.help{
+    background-color: rgba(255,255,255,0.6);
+    position: absolute;
+    height: 130px;
+    width: 251px;
+    top: 331px;
+    left: 520px;
+    text-align: center;
+    line-height: 130px;
+}
+.program{
+    background-color: rgba(255,255,255,0.6);
+    position: absolute;
+    height: 130px;
+    width: 125px;
+    top: 462px;
+    left: 268px;
+    text-align: center;
+    line-height: 130px;
+}
+.user{
+    background-color: rgba(255,255,255,0.6);
+    position: absolute;
+    height: 130px;
+    width: 125px;
+    top: 462px;
+    left: 394px;
+    text-align: center;
+    line-height: 130px;
+}
+.bill{
+    background-color: rgba(255,255,255,0.6);
+    position: absolute;
+    height: 130px;
+    width: 125px;
+    top: 462px;
+    left: 520px;
+    text-align: center;
+    line-height: 130px;
+}
+.finance{
+    background-color: rgba(255,255,255,0.6);
+    position: absolute;
+    height: 130px;
+    width: 125px;
+    top: 462px;
+    left: 646px;
+    text-align: center;
+    line-height: 130px;
+}
+.broad{
+    background-color: rgba(255,255,255,0.6);
+    position: absolute;
+    height: 393px;
+    width: 503px;
+    top: 200px;
+    left: 772px;
+}
+.broad_title{
+    position: absolute;
+    width: 503px;
+    height: 30px;
+    line-height: 40px;
+    font-size: 20px;
+    text-align: center;
+}
+.broad_content{
+    position: absolute;
+    width: 423px;
+    height: 333px;
+    top: 40px;
+    left: 40px;
+    background-color: white;
+}
+a:link, a:visited{
+    display: block;
+    text-decoration: none;
+    color: black;
+    font-size: 20px;
+}
+a:hover, a:active{
+    font-weight: bold;
+    font-size: x-large;
+}
