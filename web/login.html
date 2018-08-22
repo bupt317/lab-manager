@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>欢迎登录</title>
+    <link rel="stylesheet" type="text/css" href="login.css">
+    <script>
+        function isValidate(form) {
+            userid = form.account.value;
+            password = form.password.value;
+            rights = form.rights.value;
+
+            if(userid.length == 0){
+                alert("账号不能为空！");
+                form.userid.focus();
+                return false;
+            }
+
+            if(password.length == 0){
+                alert("密码不能为空！");
+                form.password.focus();
+                return false;
+            }
+
+            if(rights.length == 0){
+                alert("请选择权限！");
+                form.password.focus();
+                return false;
+            }
+        }
+    </script>
+</head>
+<body>
+<div class="background">
+    <img src="picture/login_background.jpg">
+    <div class="logo">
+        <img src="picture/bupt.png">
+    </div>
+
+    <div class="login_bk">
+        <form name="login_form" onsubmit="return isValidate(login_form)" method="post">
+            <div class="title">欢迎登录</div>
+            <div class="account">
+                账号  <input name="account" type="text">
+            </div>
+            <div class="password">
+                密码  <input name="password" type="password">
+            </div>
+            <div class="rights">
+                用户 <input type="radio" name="rights">
+                &nbsp; &nbsp; &nbsp;
+                管理员 <input type="radio" name="rights">
+            </div>
+            <div class="button">
+                <input type="submit" value="登录" style="position: absolute; left: 25px">
+            </div>
+            <button class="register_button" onclick="window.location.href='/register.html'">注册</button>
+        </form>
+    </div>
+</div>
+</body>
+</html>

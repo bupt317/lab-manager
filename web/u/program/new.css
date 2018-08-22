@@ -1,0 +1,153 @@
+body{
+    margin: 0;
+}
+.background img{
+    position: relative;
+    width: 1536px;
+    height: 723px;
+}
+.guide{
+    position: absolute;
+    height: 60px;
+    width: 1536px;
+    top: 0;
+    left: 0;
+    text-align: center;
+    line-height: 60px;
+    font-size: 28px;
+    background-color: rgba(255, 255, 255, 0.6);
+}
+.home_logo{
+    position: absolute;
+    width: 60px;
+    height: 60px;
+    top: 0px;
+    left: 10px;
+}
+.home_logo img{
+    position: absolute;
+    width: 24px;
+    height: 24px;
+    top: 10px;
+    left: 18px;
+}
+.home_logo span{
+    position: absolute;
+    font-size: 12px;
+    width: 24px;
+    height: 10px;
+    top: 14px;
+    left: 18px;
+}
+.logout_logo{
+    position: absolute;
+    width: 60px;
+    height: 60px;
+    top: 0px;
+    left: 60px;
+}
+.logout_logo img{
+    position: absolute;
+    width: 24px;
+    height: 24px;
+    top: 10px;
+    left: 18px;
+}
+.logout_logo span{
+    position: absolute;
+    font-size: 12px;
+    width: 24px;
+    height: 10px;
+    top: 14px;
+    left: 18px;
+}
+a:link, a:visited{
+    display: block;
+    text-decoration: none;
+    color: black;
+    font-size: 20px;
+}
+.programnew{
+    background-color: rgba(255, 255, 255, 0.6);
+    position: absolute;
+    width: 1000px;
+    height: 543px;
+    top: 120px;
+    left: 268px;
+}
+.programnew_title{
+    position: absolute;
+    width: 1000px;
+    height: 30px;
+    background-color: white;
+    text-align: center;
+    line-height: 30px;
+}
+.programnew_start{
+    position: absolute;
+    width: 400px;
+    height: 30px;
+    top: 60px;
+    left: 300px;
+    line-height: 30px;
+    text-align: left;
+}
+.programnew_end{
+    position: absolute;
+    width: 400px;
+    height: 30px;
+    top: 105px;
+    left: 300px;
+    line-height: 30px;
+    text-align: left;
+}
+.programnew_name{
+    position: absolute;
+    width: 400px;
+    height: 30px;
+    top: 150px;
+    left: 300px;
+    line-height: 30px;
+    text-align: left;
+}
+.programnew_member{
+    position: absolute;
+    width: 400px;
+    height: 30px;
+    top: 195px;
+    left: 300px;
+    line-height: 30px;
+    text-align: left;
+}
+.programnew_message{
+    position: absolute;
+    width: 400px;
+    height: 180px;
+    top: 240px;
+    left: 300px;
+    line-height: 30px;
+    text-align: left;
+}
+.programnew_state{
+    position: absolute;
+    width: 400px;
+    height: 30px;
+    top: 435px;
+    left: 300px;
+    line-height: 30px;
+    text-align: left;
+}
+.programnew_button{
+    position: absolute;
+    width: 400px;
+    height: 30px;
+    top: 480px;
+    left: 300px;
+    line-height: 30px;
+    text-align: center;
+}
+.cancel{
+    position: absolute;
+    top: 480px;
+    left: 550px;
+}

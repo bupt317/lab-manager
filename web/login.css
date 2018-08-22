@@ -1,0 +1,67 @@
+.background{
+    width: 1024px;
+    height: 705px;
+    position: relative;
+    margin: auto auto;
+}
+.login_bk{
+    height: 280px;
+    width: 400px;
+    background-color: rgba(255,255,255,0.6);
+    position: absolute;
+    left: 580px;
+    top: 270px;
+}
+.title {
+    width: 140px;
+    height: 40px;
+    text-align: center;
+    font-size: 28px;
+    position: absolute;
+    left: 130px;
+    top: 30px;
+}
+.account{
+    width: 200px;
+    text-align: center;
+    font-size: 14px;
+    position: absolute;
+    left: 100px;
+    top: 90px;
+}
+.password{
+    width: 200px;
+    text-align: center;
+    font-size: 14px;
+    position: absolute;
+    left: 100px;
+    top: 132px;
+}
+.rights{
+    width: 200px;
+    text-align: center;
+    font-size: 14px;
+    position: absolute;
+    left: 100px;
+    top: 172px;
+}
+.button{
+    width: 200px;
+    text-align: center;
+    font-size: 14px;
+    position: absolute;
+    left: 100px;
+    top: 212px;
+}
+.register_button{
+    position: absolute;
+    top: 212px;
+    right: 130px;
+}
+div.logo img{
+    width: 400px;
+    height: 120px;
+    position:absolute;
+    top: 50px;
+    left:50px;
+}
