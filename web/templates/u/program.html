@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <title>项目管理</title>
-    <link rel="stylesheet" type="text/css" href="program.css">
+    <link rel="stylesheet" type="text/css" href="../../static/css/u/program.css">
     <script>
         function loadXMLDoc() {
             var xmlhttp = new XMLHttpRequest();
@@ -25,20 +25,20 @@
 </head>
 <body>
 <div class="background">
-    <img src="../picture/background.jpg">
+    <img src="../../picture/background.jpg">
 
     <div class="guide">
         欢迎使用317财务管理系统
         <a href="home.html">
             <div class="home_logo">
-                <img src="../picture/home_logo.png">
+                <img src="../../picture/home_logo.png">
                 <span>主页</span>
             </div>
         </a>
 
-        <a href="/web/login.html">
+        <a href="/web/index.html">
             <div class="logout_logo">
-                <img src="../picture/exit_logo.png">
+                <img src="../../picture/exit_logo.png">
                 <span>退出</span>
             </div>
         </a>
@@ -47,9 +47,9 @@
     <div class="programList">
         <div class="programList_title">项目管理</div>
 
-        <a href="program/new.html">
+        <a href="../../static/u/program/new.html">
             <div class="new">
-                <img src="../picture/add_logo.png">
+                <img src="../../picture/add_logo.png">
                 <span>新建项目</span>
             </div>
         </a>
@@ -72,8 +72,8 @@
                     项目状态：<span id="state"></span>
                 </li>
             </ul>
-            <button class="alter" onclick="window.location.href='/web/u/program/alter.html'">修改</button>
-            <button class="graph" onclick="window.location.href='/web/u/program/graph.html'">花销图表</button>
+            <button class="alter" onclick="window.location.href='../../static/u/program/alter.html'">修改</button>
+            <button class="graph" onclick="window.location.href='program/graph.html'">花销图表</button>
         </div>
     </div>
 </div>
