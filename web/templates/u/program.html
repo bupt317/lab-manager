@@ -11,15 +11,33 @@
                 if (xmlhttp.readyState == 4 && xmlhttp.status == 200)
                 {
                     var obj = JSON.parse(xmlhttp.responseText);
-                    document.getElementById("project").innerHTML = obj.project;
-                    document.getElementById("member").innerHTML = obj.member;
-                    document.getElementById("message").innerHTML = obj.message;
-                    document.getElementById("end").innerHTML = obj.end;
-                    document.getElementById("state").innerHTML = obj.state;
+                    for (var i=0; i<obj.data.length; i++) {
+                        create_div(obj.data[i], i);
+                    }
                 }
             };
-            xmlhttp.open("GET","/web/u/data.json", true);
+            xmlhttp.open("GET","data.json", true);
             xmlhttp.send();
+        }
+
+        function create_div(item, num) {
+            var content = document.getElementById("List");
+            var create_Div = document.createElement("div");
+            var ul = document.createElement('ul');
+            content.appendChild(create_Div);
+            create_Div.appendChild(ul);
+            create_Div.style.position = "absolute";
+            create_Div.style.top = (num*230+70)+"px";
+            create_Div.style.height = "200px";
+            create_Div.innerHTML='<ul class="programList_content">'+'<li style="line-height: 30px">'+"项目名称："+ item.project +'</li>'+
+                '<li style="line-height: 30px">'+"项目人员："+ item.member + '</li>' +
+                '<li style="line-height: 30px">'+"项目信息："+ item.message + '</li>' +
+                '<li style="line-height: 30px">'+"项目期限："+ item.end + '</li>' +
+                '<li style="line-height: 30px">'+"项目状态：" + item.state+'</li>'+
+                '<button class="alter" onclick="window.location.href=\'../../static/u/program/alter.html\'">修改</button>'+
+                '<button class="graph" onclick="window.location.href=\'program/graph.html\'">花销图表</button>'+
+                '</ul>';
+            content.style.height = (330+230*num)+"px";
         }
     </script>
 </head>
@@ -44,7 +62,7 @@
         </a>
     </div>
 
-    <div class="programList">
+    <div class="programList" id="List">
         <div class="programList_title">项目管理</div>
 
         <a href="../../static/u/program/new.html">
@@ -53,29 +71,6 @@
                 <span>新建项目</span>
             </div>
         </a>
-
-        <div class="programList_content" id="content">
-            <ul class="list">
-                <li>
-                    项目名称：<span id="project"></span>
-                </li>
-                <li>
-                    参与人员：<span id="member"></span>
-                </li>
-                <li>
-                    项目信息：<span id="message"></span>
-                </li>
-                <li>
-                    项目期限：<span id="end"></span>
-                </li>
-                <li>
-                    项目状态：<span id="state"></span>
-                </li>
-            </ul>
-            <button class="alter" onclick="window.location.href='../../static/u/program/alter.html'">修改</button>
-            <button class="graph" onclick="window.location.href='program/graph.html'">花销图表</button>
-        </div>
-    </div>
 </div>
 <script>
     loadXMLDoc();

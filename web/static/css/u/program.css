@@ -106,21 +106,22 @@ body{
     left: 25px;
     line-height: 30px;
 }
+
 .programList_content{
     position: absolute;
+    margin: 0;
+    padding-top: 10px;
     width: 600px;
     height: 200px;
     background-color: white;
-    top: 70px;
     left: 200px;
+    overflow: auto;
 }
-.programList_content .alter{
+ .alter{
     position: absolute;
-    top: 170px;
     left: 450px;
 }
-.programList_content .graph{
+ .graph{
     position: absolute;
-    top: 170px;
     left: 510px;
 }
