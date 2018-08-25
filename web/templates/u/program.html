@@ -6,7 +6,7 @@
     <link rel="stylesheet" type="text/css" href="../../static/css/u/program.css">
     <script>
         function loadXMLDoc() {
-            var xmlhttp = new XMLHttpRequest();
+            xmlhttp = new XMLHttpRequest();
             xmlhttp.onreadystatechange=function () {
                 if (xmlhttp.readyState == 4 && xmlhttp.status == 200)
                 {
@@ -21,9 +21,9 @@
         }
 
         function create_div(item, num) {
-            var content = document.getElementById("List");
-            var create_Div = document.createElement("div");
-            var ul = document.createElement('ul');
+            content = document.getElementById("List");
+            create_Div = document.createElement("div");
+            ul = document.createElement('ul');
             content.appendChild(create_Div);
             create_Div.appendChild(ul);
             create_Div.style.position = "absolute";
@@ -71,6 +71,7 @@
                 <span>新建项目</span>
             </div>
         </a>
+    </div>
 </div>
 <script>
     loadXMLDoc();
