@@ -21,6 +21,16 @@
     left: 130px;
     top: 30px;
 }
+.err_alert{
+    width: 200px;
+    height: 12px;
+    text-align: left;
+    position: absolute;
+    top: 74px;
+    left: 140px;
+    color: red;
+    font-size: 12px;
+}
 .account{
     width: 200px;
     text-align: center;
