@@ -3,9 +3,15 @@
 <head>
     <meta charset="UTF-8">
     <title>修改项目信息</title>
-    <link rel="stylesheet" type="text/css" href="../../css/u/program/alter.css">
+    <link rel="stylesheet" type="text/css" href="../../../static/css/u/program/alter.css">
     <script>
-
+        function time() {
+           year = document.getElementById("year").valueOf();
+           month = document.getElementById("month").valueOf();
+           day = document.getElementById("day").valueOf();
+           var date = year + " 年 " + month + " 月 " + day + "日";
+           console.log(date)
+        }
     </script>
 </head>
 <body>
@@ -14,7 +20,7 @@
 
     <div class="guide">
         欢迎使用317财务管理系统
-        <a href="../../../templates/u/home.html">
+        <a href="../home.html">
             <div class="home_logo">
                 <img src="/web/picture/home_logo.png">
                 <span>主页</span>
@@ -35,12 +41,12 @@
             <div>
                 <div class="programalter_start">
                     起始日期：
-                    <select>
+                    <select id="year">
                         <option value="year" selected="selected">2018</option>
                         <option value="year">2019</option>
                         <option value="year">2020</option>
                     </select> &nbsp; 年 &nbsp;
-                    <select>
+                    <select id="month">
                         <option value="month">1</option>
                         <option value="month">2</option>
                         <option value="month">3</option>
@@ -54,7 +60,7 @@
                         <option value="month">11</option>
                         <option value="month">12</option>
                     </select> &nbsp; 月 &nbsp;
-                    <select>
+                    <select id="day">
                         <option value="day">1</option>
                         <option value="day">2</option>
                         <option value="day">3</option>
@@ -164,10 +170,10 @@
                 已结项 <input type="radio"  name="state">
             </div>
             <div class="programalter_button">
-                <input type="submit" value="保存" style="position: absolute; left: 110px">
+                <input type="button" value="保存" style="position: absolute; left: 110px" onclick="time()">
             </div>
         </form>
-        <button class="cancel" onclick="window.location.href='../../../templates/u/program.html'">取消</button>
+        <button class="cancel" onclick="window.location.href='../program.html'">取消</button>
     </div>
 </div>
 </body>

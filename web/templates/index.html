@@ -6,52 +6,46 @@
     <link rel="stylesheet" type="text/css" href="/css/login.css">
     <script th:src="@{/js/jquery-3.3.1.js}"></script>
     <script>
-        function isValidate(form) {
-            userid = form.Username.value;
-            password = form.password.value;
-            rights = form.authority.value;
-
-            if(userid.length == 0){
-                alert("账号不能为空！");
-                form.Username.focus();
-                return false;
-            }
-
-            if(password.length == 0){
-                alert("密码不能为空！");
-                form.password.focus();
-                return false;
-            }
-
-            if(rights.length == 0){
-                alert("请选择权限！");
-                form.authority.focus();
-                return false;
+        function isnull(val)
+        {
+            if (val == ""|| val == undefined)
+            {
+                return 1;
+            } else
+            {
+                return 0;
             }
         }
 
         function login() {
-            data = $("form").serialize();
-            $.ajax({
-                type:"post",
-                url:"/u/ajax_login",
-                contentType:"application/x-www-form-urlencoded;charset=utf-8",
-                data: data,
-                dataType:"json",
-                success:function (result) {
-                    if (result == 'A') {
-                        document.getElementById("mess").innerText = "请输入账号";
-                    }else if (result == 'B') {
-                        document.getElementById("mess").innerText = "请输入密码";
-                    }else if (result == 'C'){
-                        document.getElementById("mess").innerText = "请选择权限";
-                    }else if (result == 'N'){
-                        document.getElementById("mess").innerText = "账号或密码错误";
-                    } else if (result == 'Y'){
-                        alert("登录成功！")
+            Username = $("#username").val();
+            password = $("#password").val();
+            authority = $("input[name = authority]:checked").val();
+
+            if (isnull(Username)) {
+                $("#mess").text("请输入账号");
+            } else if (isnull(password)) {
+                $("#mess").text("请输入密码");
+            } else if (isnull(authority)) {
+                $("#mess").text("请选择权限");
+            } else {
+                $("#mess").text(null);
+                data = $("form").serialize();
+                $.ajax({
+                    type: "post",
+                    url: "/u/ajax_login",
+                    contentType: "application/x-www-form-urlencoded;charset=utf-8",
+                    data: data,
+                    dataType: "json",
+                    success: function (result) {
+                        if (result == 'N') {
+                            document.getElementById("mess").innerText = "账号或密码错误";
+                        } else if (result == 'Y') {
+                            alert("登录成功！")
+                        }
                     }
-                }
-            });
+                });
+            }
         }
     </script>
 </head>
@@ -67,13 +61,13 @@
         <span id="mess" class="err_alert"></span>
         <form name="login_form" method="post">
             <div class="account">
-                账号  <input name="Username" type="text">
+                账号  <input name="Username" id="username" type="text">
             </div>
             <div class="password">
-                密码  <input name="password" type="password">
+                密码  <input name="password" id="password" type="password">
             </div>
-            <div class="rights">
-                用户 <input type="radio" name="authority" value="M">
+            <div class="rights" id="rights">
+                用户 <input type="radio" name="authority"  value="M">
                 &nbsp; &nbsp; &nbsp;
                 管理员 <input type="radio" name="authority" value="A">
             </div>

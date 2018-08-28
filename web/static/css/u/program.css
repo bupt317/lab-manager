@@ -2,7 +2,7 @@ body{
     margin: 0;
 }
 .background img{
-    position: relative;
+    position: fixed;
     width: 1536px;
     height: 1023px;
 }

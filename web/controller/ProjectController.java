@@ -21,13 +21,7 @@ public class ProjectController {
     @ResponseBody
     public char log(String Username, String password, String authority) {
         var site = 'N';
-        if (Username.equals("")) {
-            site = 'A';
-        } else if (password.equals("")) {
-            site = 'B';
-        } else if (authority == null) {
-            site = 'C';
-        } else if (Username.equals("2018111168") & password.equals("123456") & authority.equals("A")) {
+        if (Username.equals("2018111168") & password.equals("123456") & authority.equals("A")) {
             site = 'Y';
         }
         return site;
