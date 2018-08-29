@@ -2,51 +2,43 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>修改项目信息</title>
-    <link rel="stylesheet" type="text/css" href="../../../static/css/u/program/alter.css">
-    <script>
-        function time() {
-           year = document.getElementById("year").valueOf();
-           month = document.getElementById("month").valueOf();
-           day = document.getElementById("day").valueOf();
-           var date = year + " 年 " + month + " 月 " + day + "日";
-           console.log(date)
-        }
-    </script>
+    <title>新建项目</title>
+    <link rel="stylesheet" type="text/css" href="../../css/u/program/new.css">
+    <script src="jquery-3.3.1.js"></script>
 </head>
 <body>
 <div class="background">
-    <img src="/web/picture/background.jpg">
+    <img src="/lab-manager/web/picture/background.jpg">
 
     <div class="guide">
         欢迎使用317财务管理系统
-        <a href="../home.html">
+        <a href="/web/u/home.html">
             <div class="home_logo">
-                <img src="/web/picture/home_logo.png">
+                <img src="/lab-manager/web/picture/home_logo.png">
                 <span>主页</span>
             </div>
         </a>
 
         <a href="/web/login.html">
             <div class="logout_logo">
-                <img src="/web/picture/exit_logo.png">
+                <img src="/lab-manager/web/picture/exit_logo.png">
                 <span>退出</span>
             </div>
         </a>
     </div>
 
-    <div class="programalter">
-        <div class="programalter_title">修改项目信息</div>
-        <form>
+    <div class="programnew">
+        <div class="programnew_title">创建项目</div>
+        <form method="post">
             <div>
-                <div class="programalter_start">
+                <div class="programnew_start">
                     起始日期：
-                    <select id="year">
+                    <select>
                         <option value="year" selected="selected">2018</option>
                         <option value="year">2019</option>
                         <option value="year">2020</option>
                     </select> &nbsp; 年 &nbsp;
-                    <select id="month">
+                    <select>
                         <option value="month">1</option>
                         <option value="month">2</option>
                         <option value="month">3</option>
@@ -60,7 +52,7 @@
                         <option value="month">11</option>
                         <option value="month">12</option>
                     </select> &nbsp; 月 &nbsp;
-                    <select id="day">
+                    <select>
                         <option value="day">1</option>
                         <option value="day">2</option>
                         <option value="day">3</option>
@@ -95,7 +87,7 @@
                     </select> &nbsp; 日 &nbsp;
                 </div>
             </div>
-            <div class="programalter_end">
+            <div class="programnew_end">
                 项目期限：
                 <select>
                     <option value="year" selected="selected">2018</option>
@@ -151,30 +143,31 @@
                 </select> &nbsp; 日 &nbsp;
             </div>
 
-            <div class="programalter_name">
+            <div class="programnew_name">
                 项目名称：<input type="text" name="Project" size="35">
             </div>
 
-            <div class="programalter_member">
+            <div class="programnew_member">
                 参与人员：<input type="text" name="member" size="35">
             </div>
-            <div class="programalter_message">
+            <div class="programnew_message">
                 项目信息：
                 <textarea name="message" style="width: 395px; height: 144px; resize: none"></textarea>
             </div>
-            <div class="programalter_state">
+            <div class="programnew_state">
                 项目状态：
                 &nbsp; &nbsp;&nbsp;
                 未结项 <input type="radio"  name="state">
                 &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;
                 已结项 <input type="radio"  name="state">
             </div>
-            <div class="programalter_button">
-                <input type="button" value="保存" style="position: absolute; left: 110px" onclick="time()">
+            <div class="programnew_button">
+                <input type="submit" value="保存" style="position: absolute; left: 110px">
             </div>
         </form>
         <button class="cancel" onclick="window.location.href='../program.html'">取消</button>
     </div>
+
 </div>
 </body>
 </html>

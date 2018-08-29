@@ -1,0 +1,35 @@
+
+<html>
+	<head>
+		<title>left</title>
+		<meta charset="utf-8">
+		<style>
+
+			ul,li{
+				list-style: none;
+			}
+		</style>
+	</head>
+	<body>
+		<ul>
+			<li id="baoxiao" onclick="show('baoxiao.html')">费用报销</li>
+			<br>
+			<br>
+			<li id="yilan" onclick="show('yilan.html')">报销一览</li>
+			<br>
+			<br>
+			<li id="shenhe" onclick="show('shenhe.html')">费用审核</li>
+		</ul>
+	</body>
+	<script>
+			function  show(url){
+				// alert(url)
+				// window.parent.document.getElementById("qiehuan").src=url
+				// parent.document.getElementById("qiehuan").src=url;
+				//parent.document.getElementById('qiehuan').src=url
+				  var qiehuan = window.parent; //得到A的window  
+				  // alert(qiehuan.document.getElementById('qiehuan'))
+    			  qiehuan.document.getElementById('qiehuan').src=url
+			}
+	</script>
+</html>

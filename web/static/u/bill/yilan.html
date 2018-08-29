@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8">
+		<title>报销一览</title>
+	</head>
+	<body>
+		<div>报销一览</div>
+		<table>
+			<form action=""  method="get">
+				<tr>
+					<td>
+						报销查看：<input type="text" name="baoxiao_chakan" / >
+					</td>
+					<td>
+					  <button type="button">删除</button>
+					</td>
+				</tr>
+			</form>
+		</table>
+		<form action=" " method="get">
+			<table>
+				<caption>报销筛选</caption>
+				<tr>
+					<td>
+						报销类别：<input type="text" name="baoxiao_type" / >
+					</td>
+				</tr>
+				<tr>
+					<td>
+							时间：<input type="text" name="time_before" / >   至 ：<input type="text" name="time_after" / >
+					</td>
+				</tr>
+				<tr>
+					<td>
+						金额：<input type="text" name="money_before" / >   至 ：<input type="text" name="money_after" / >
+					</td>
+				</tr>
+				<tr>
+					<td>
+						报销状态:     <input type="text" name="baoxiao_zhuangtai" / > 
+					</td>
+					<td>
+						发票状态:     <input type="text" name="fapiao_zhuangtai" / > 
+					</td>
+				</tr>
+				<tr>
+					<td>
+						 <button type="button">筛选</button>
+					</td>
+				</tr>
+				<tr>
+					<td>
+						筛选结果： <textarea cols ="35" row="10" name= "shaixuanjieguo"></textarea>
+					</td>
+				</tr>
+				<tr></tr>
+			</table>
+		</form>
+	</body>
+</html>

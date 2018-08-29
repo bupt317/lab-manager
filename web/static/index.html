@@ -3,8 +3,8 @@
 <head>
     <meta  http-equiv="Content-Type" content="text/html; charset=utf-8"/>
     <title>欢迎登录</title>
-    <link rel="stylesheet" type="text/css" href="/css/login.css">
-    <script th:src="@{/js/jquery-3.3.1.js}"></script>
+    <link rel="stylesheet" type="text/css" href="/lab-manager/web/static/css/index.css">
+    <script src="/lab-manager/web/static/js/jquery-3.3.1.js"></script>
     <script>
         function isnull(val)
         {
@@ -51,9 +51,9 @@
 </head>
 <body>
 <div class="background">
-    <img src="/picture/login_background.jpg">
+    <img src="/lab-manager/web/picture/login_background.jpg">
     <div class="logo">
-        <img src="/picture/bupt.png">
+        <img src="/lab-manager/web/picture/bupt.png">
     </div>
 
     <div class="login_bk">
@@ -74,7 +74,7 @@
             <div class="button">
                 <input type="button" value="登录" style="position: absolute; left: 25px" onclick="login()">
             </div>
-            <button class="register_button" onclick="window.location.href='register.html'">注册</button>
+            <button class="register_button" onclick="window.location.href='/web/static/register.html'">注册</button>
         </form>
     </div>
 </div>
