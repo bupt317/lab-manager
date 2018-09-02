@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>入账管理</title>
+    <link rel="stylesheet" type="text/css" href="/lab-manager/web/static/css/u/finance/enter/enter.css ">
+    <script>
+        function loadXMLDoc() {
+            xmlhttp = new XMLHttpRequest();
+            xmlhttp.onreadystatechange=function () {
+                if (xmlhttp.readyState == 4 && xmlhttp.status == 200)
+                {
+                    var obj = JSON.parse(xmlhttp.responseText);
+                    for (var i=0; i<obj.data.length; i++) {
+                        create_div(obj.data[i], i);
+                    }
+                }
+            };
+            xmlhttp.open("GET","/lab-manager/web/data/data.json", true);
+            xmlhttp.send();
+        }
+
+        function create_div(item, num) {
+            content = document.getElementById("contain");
+            create_Div = document.createElement("div");
+            ul = document.createElement('ul');
+            content.appendChild(create_Div);
+            create_Div.appendChild(ul);
+            create_Div.style.position = "absolute";
+            create_Div.style.top = (num*230+70)+"px";
+            create_Div.style.height = "200px";
+            create_Div.innerHTML='<ul class="programList_content">'+ '<li style="line-height: 30px">'+"姓名："+ item.project +'</li>'+
+                    '<li style="line-height: 30px">'+"时间："+ item.time + '</li>' +
+                    '<li style="line-height: 30px">'+"金额："+ item.money + '</li>' +
+                    '<li style="line-height: 30px">'+"备注：" + item.massage+'</li>'+
+                    '<button class="alter" onclick="window.location.href=\'alter.html\'">修改</button>'+
+                    '<button class="delete" onclick="window.location.href=\'delate.html\'">删除</button>'+
+                    '</ul>';
+
+            content.style.height = (330+230*num)+"px";
+        }
+    </script>
+</head>
+<body>
+<div class="background">
+    <img src="/lab-manager/web/picture/background.jpg">
+
+    <div class="guide">
+        欢迎使用317财务管理系统
+        <a href="home.html">
+            <div class="home_logo">
+                <img src="/lab-manager/web/picture/home_logo.png">
+                <span>主页</span>
+            </div>
+        </a>
+
+        <a href="/web/index.html">
+            <div class="logout_logo">
+                <img src="/lab-manager/web/picture/exit_logo.png">
+                <span>退出</span>
+            </div>
+        </a>
+    </div>
+
+    <div class="programList" id="List">
+        <div class="programList_title">资金管理</div>
+        <div class="box1">
+            <a href="#">317财务管理系统</a>
+        </div>
+
+    <br><br>
+
+    <div class="contain">
+        <div class="box2">
+                <div class="box3">
+                    <a href="../../../../../../微信/WeChat%20Files/sky572415094/Files/finance/graph.html ">出入账一览</a>
+                </div>
+
+                <div class="box4">
+                   <span>入账管理</span>
+                </div>
+
+                <div class="box5">
+                    <a href="../../../../../../微信/WeChat%20Files/sky572415094/Files/finance/salary.html ">工资管理</a>
+                </div>
+
+            </div>
+        <div class="container ">
+            <div class="box12">
+                <p>姓名:</p>
+                <p>时间:</p>
+                <p>金额:</p>
+                <p>备注:
+      <span class="box21">
+        <button type="button">删除</button>
+      </span>
+      <span class="box22">
+      <button type="button">修改</button>
+      </span>
+
+                </p>
+            </div>
+        <div class="add">
+            <a href="alter.html">
+                <div class="new">
+                    <img src="/lab-manager/web/picture/add_logo.png">
+                    <span>新建管理</span>
+                </div>
+            </a>
+        </div>
+
+
+    </div>
+    </div>
+</div>
+</div>
+<script>
+    loadXMLDoc();
+</script>
+</body>
+</html>

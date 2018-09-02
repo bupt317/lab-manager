@@ -168,7 +168,7 @@ a{
     border:1px solid black;
     margin:0 auto;
     text-align: center;
-    background:gray;
+    background:white ;
     float:left;
     border-radius:8px;
 }
@@ -179,7 +179,7 @@ a{
     margin:0 auto;
     border:1px solid black;
     text-align: center;
-    background:white;
+    background:gray;
     float:left;
     border-radius:8px;
 }
@@ -192,4 +192,47 @@ a{
     background:white;
     float:left;
     border-radius:8px;
+}
+
+.box12{
+    width:90%;
+    height:130px;
+    margin:5px auto;
+    border:3px solid gray;
+    background:white;
+    border-radius:8px;
+    font-size: 10px;
+}
+
+.box21{
+    width:60px;
+    height:30px;
+    float:right;
+}
+
+.box22{
+    width:60px;
+    height:30px;
+    float:right;
+}
+
+.box13{
+    width:90%;
+    height:130px;
+    margin:5px auto;
+    border:3px solid gray;
+    background:white;
+    border-radius:8px;
+    font-size: 10px;
+}
+
+.box31{
+    width:60px;
+    height:30px;
+    float:right;
+}
+
+.new{
+
+    margin: 200px auto ;
 }

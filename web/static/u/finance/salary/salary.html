@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>工资管理</title>
+    <link rel="stylesheet" type="text/css" href="/lab-manager/web/static/css/u/finance/salary/salary.css  ">
+    <script>
+        function loadXMLDoc() {
+            xmlhttp = new XMLHttpRequest();
+            xmlhttp.onreadystatechange=function () {
+                if (xmlhttp.readyState == 4 && xmlhttp.status == 200)
+                {
+                    var obj = JSON.parse(xmlhttp.responseText);
+                    for (var i=0; i<obj.data.length; i++) {
+                        create_div(obj.data[i], i);
+                    }
+                }
+            };
+            xmlhttp.open("GET","/lab-manager/web/data/data.json", true);
+            xmlhttp.send();
+        }
+
+        function create_div(item, num) {
+            content = document.getElementById("box11");
+            create_Div = document.createElement("div");
+            ul = document.createElement('ul');
+            content.appendChild(create_Div);
+            create_Div.appendChild(ul);
+            create_Div.style.position = "absolute";
+            create_Div.style.top = (num*230+70)+"px";
+            create_Div.style.height = "200px";
+            create_Div.innerHTML='<ul class="programList_content">'+ '<li style="line-height: 30px">'+"姓名："+ item.member +'</li>'+
+                    '<li style="line-height: 30px">'+"<日期></日期>："+ item.time + '</li>' +
+                    '<li style="line-height: 30px">'+"项目信息："+ item.message + '</li>' +
+                    '<li style="line-height: 30px">'+"派发状态：" + item.state+'</li>'+'<hr>'+
+                    '</ul>';
+            content.style.height = (330+230*num)+"px";
+        }
+    </script>
+</head>
+<body>
+<div class="background">
+    <img src="/lab-manager/web/picture/background.jpg">
+
+    <div class="guide">
+        欢迎使用317财务管理系统
+        <a href="home.html">
+            <div class="home_logo">
+                <img src="/lab-manager/web/picture/home_logo.png">
+                <span>主页</span>
+            </div>
+        </a>
+
+        <a href="/web/index.html">
+            <div class="logout_logo">
+                <img src="/lab-manager/web/picture/exit_logo.png">
+                <span>退出</span>
+            </div>
+        </a>
+    </div>
+
+    <div class="programList" id="List">
+        <div class="programList_title">资金管理</div>
+
+        <br><br>
+
+        <div class="container">
+            <div class="box2">
+                <div class="box3">
+                    <a href="../../../../../../微信/WeChat%20Files/sky572415094/Files/finance/graph.html ">出入账一览</a>
+                </div>
+
+                <div class="box4">
+                    <a href="enter.html ">入账管理</a>
+                </div>
+
+                <div class="box5">
+
+                    <span>工资管理</span>
+                </div>
+
+            </div>
+            <br>
+            <div class="box11">
+                <table border="2" width="100%">
+                    <tr>
+                        <th>姓名</th>
+                        <th>日期</th>
+                        <th>备注</th>
+                        <th>派发状态</th>
+                    </tr>
+                    <tr>
+                        <td>张三</td>
+                        <td>#年#月#日</td>
+                        <td></td>
+                        <td>已派发</td>
+                    </tr>
+                    <tr>
+                        <td>李四</td>
+                        <td>#年#月#日</td>
+                        <td></td>
+                        <td>未派发</td>
+                    </tr>
+                    <tr>
+                        <td><br></td>
+                        <td><br></td>
+                        <td><br></td>
+                        <td><br></td>
+                    </tr>
+                    <tr>
+                        <td><br></td>
+                        <td><br></td>
+                        <td><br></td>
+                        <td><br></td>
+                    </tr>
+                </table>
+            </div>
+        </div>
+
+    </div>
+</div>
+</div>
+<script>
+    loadXMLDoc();
+</script>
+</body>
+</html>

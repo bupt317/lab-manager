@@ -131,7 +131,7 @@ body{
     background:gray;
     padding:5px;
     border:5px solid black;
-    margin:3px;
+    margin:3px
     float:left;
 }
 
@@ -152,44 +152,3 @@ body{
     border-radius:8px;
 }
 
-.box2{
-    width:90%;
-    height:25px;
-    margin:0 auto;
-    background:white;
-}
-a{
-    text-decoration:none;
-    color:#000;
-}
-.box3{
-    width:33%;
-    height:25px;
-    border:1px solid black;
-    margin:0 auto;
-    text-align: center;
-    background:gray;
-    float:left;
-    border-radius:8px;
-}
-
-.box4{
-    width:33%;
-    height:25px;
-    margin:0 auto;
-    border:1px solid black;
-    text-align: center;
-    background:white;
-    float:left;
-    border-radius:8px;
-}
-.box5{
-    width:33%;
-    height:25px;
-    margin:0 auto;
-    border:1px solid black;
-    text-align: center;
-    background:white;
-    float:left;
-    border-radius:8px;
-}

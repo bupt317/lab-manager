@@ -1,3 +1,4 @@
+
 body{
     margin: 0;
 }
@@ -117,11 +118,11 @@ body{
     left: 200px;
     overflow: auto;
 }
- .alter{
+.alter{
     position: absolute;
     left: 450px;
 }
- .graph{
+.graph{
     position: absolute;
     left: 510px;
 }
@@ -168,7 +169,7 @@ a{
     border:1px solid black;
     margin:0 auto;
     text-align: center;
-    background:gray;
+    background:white;
     float:left;
     border-radius:8px;
 }
@@ -189,7 +190,23 @@ a{
     margin:0 auto;
     border:1px solid black;
     text-align: center;
-    background:white;
+    background:gray ;
     float:left;
     border-radius:8px;
+}
+.box11{
+    width:90%;
+    height:90%;
+    margin:0px auto;
+
+}
+.programList_content{
+    position: absolute;
+    margin: 0;
+    padding-top: 10px;
+    width: 600px;
+    height: 200px;
+    background-color: white;
+    left: 200px;
+    overflow: auto;
 }
