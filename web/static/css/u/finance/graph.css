@@ -193,3 +193,19 @@ a{
     float:left;
     border-radius:8px;
 }
+.programgraph_flot{
+    top: 50px;
+    left: 100px;
+    width: 800px;
+    height: 460px;
+    background-color: white;
+    text-align: center;
+    line-height: 30px;
+}
+.programgraph_button{
+    top: 530px;
+    left: 300px;
+    width: 400px;
+    height: 30px;
+    line-height: 30px;
+}

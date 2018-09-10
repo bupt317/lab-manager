@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>修改项目信息</title>
+    <link rel="stylesheet" type="text/css" href="/lab-manager/web/static/css/u/finance/salary/alter_repay.css">
+    <script>
+        function time() {
+            year = document.getElementById("year").valueOf();
+            month = document.getElementById("month").valueOf();
+            day = document.getElementById("day").valueOf();
+            var date = year + " 年 " + month + " 月 " + day + "日";
+            console.log(date)
+        }
+    </script>
+</head>
+<body>
+<div class="background">
+    <img src="/lab-manager/web/picture/background.jpg">
+
+    <div class="guide">
+        欢迎使用317财务管理系统
+        <a href="../home.html">
+            <div class="home_logo">
+                <img src="/lab-manager/web/picture/home_logo.png">
+                <span>主页</span>
+            </div>
+        </a>
+
+        <a href="/web/login.html">
+            <div class="logout_logo">
+                <img src="/lab-manager/web/picture/exit_logo.png">
+                <span>退出</span>
+            </div>
+        </a>
+    </div>
+
+    <div class="repayalter">
+        <div class="repayalter_title">修改报销信息</div>
+        <form>
+            <div>
+                <div class="repayalter_start">
+                    项目日期：
+                    <select id="year">
+                        <option value="year" selected="selected">2018</option>
+                        <option value="year">2019</option>
+                        <option value="year">2020</option>
+                    </select> &nbsp; 年 &nbsp;
+                    <select id="month">
+                        <option value="month">1</option>
+                        <option value="month">2</option>
+                        <option value="month">3</option>
+                        <option value="month">4</option>
+                        <option value="month">5</option>
+                        <option value="month">6</option>
+                        <option value="month">7</option>
+                        <option value="month">8</option>
+                        <option value="month">9</option>
+                        <option value="month">10</option>
+                        <option value="month">11</option>
+                        <option value="month">12</option>
+                    </select> &nbsp; 月 &nbsp;
+                    <select id="day">
+                        <option value="day">1</option>
+                        <option value="day">2</option>
+                        <option value="day">3</option>
+                        <option value="day">4</option>
+                        <option value="day">5</option>
+                        <option value="day">6</option>
+                        <option value="day">7</option>
+                        <option value="day">8</option>
+                        <option value="day">9</option>
+                        <option value="day">10</option>
+                        <option value="day">11</option>
+                        <option value="day">12</option>
+                        <option value="day">13</option>
+                        <option value="day">14</option>
+                        <option value="day">15</option>
+                        <option value="day">16</option>
+                        <option value="day">17</option>
+                        <option value="day">18</option>
+                        <option value="day">19</option>
+                        <option value="day">20</option>
+                        <option value="day">21</option>
+                        <option value="day">22</option>
+                        <option value="day">23</option>
+                        <option value="day">24</option>
+                        <option value="day">25</option>
+                        <option value="day">26</option>
+                        <option value="day">27</option>
+                        <option value="day">28</option>
+                        <option value="day">29</option>
+                        <option value="day">30</option>
+                        <option value="day">31</option>
+                    </select> &nbsp; 日 &nbsp;
+                </div>
+            </div>
+
+            <div class="repaalter_name">
+                项目名称：<input type="text" name="Project" size="35">
+            </div>
+
+            <div class="repayalter_member">
+                项目人员：<input type="text" name="member" size="35">
+            </div>
+            <div class="repayalter_money">
+                项目金额：
+                <input type="text" name="money" size="35">
+            </div>
+            <div class="repayalter_state">
+                报销状态：
+                &nbsp; &nbsp;&nbsp;
+                未报销 <input type="radio"  name="state">
+                &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;
+                已报销 <input type="radio"  name="state">
+            </div>
+            <div class="repayalter_button">
+                <input type="button" value="保存" style="position: absolute; left: 110px" onclick="time()">
+            </div>
+        </form>
+        <button class="cancel" onclick="window.location.href='.../salary/repay.html'">取消</button>
+    </div>
+</div>
+</body>
+</html>

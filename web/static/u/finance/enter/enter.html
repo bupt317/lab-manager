@@ -29,12 +29,13 @@
             create_Div.style.position = "absolute";
             create_Div.style.top = (num*230+70)+"px";
             create_Div.style.height = "200px";
-            create_Div.innerHTML='<ul class="programList_content">'+ '<li style="line-height: 30px">'+"姓名："+ item.project +'</li>'+
+            create_Div.innerHTML='< class="programList_content">'+ '<li style="line-height: 30px">'+"姓名："+ item.project +'</li>'+
                     '<li style="line-height: 30px">'+"时间："+ item.time + '</li>' +
                     '<li style="line-height: 30px">'+"金额："+ item.money + '</li>' +
                     '<li style="line-height: 30px">'+"备注：" + item.massage+'</li>'+
                     '<button class="alter" onclick="window.location.href=\'alter.html\'">修改</button>'+
                     '<button class="delete" onclick="window.location.href=\'delate.html\'">删除</button>'+
+                    '<hr>'
                     '</ul>';
 
             content.style.height = (330+230*num)+"px";

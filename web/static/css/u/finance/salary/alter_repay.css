@@ -2,9 +2,9 @@ body{
     margin: 0;
 }
 .background img{
-    position: fixed;
+    position: relative;
     width: 1536px;
-    height: 1023px;
+    height: 723px;
 }
 .guide{
     position: absolute;
@@ -67,15 +67,15 @@ body{
     color: black;
     font-size: 20px;
 }
-.programList{
+.repayalter{
     background-color: rgba(255, 255, 255, 0.6);
     position: absolute;
     width: 1000px;
-    height: 600px;
+    height: 543px;
     top: 120px;
     left: 268px;
 }
-.programList_title{
+.repayalter_title{
     position: absolute;
     width: 1000px;
     height: 30px;
@@ -83,45 +83,63 @@ body{
     text-align: center;
     line-height: 30px;
 }
-.new{
+.repayalter_start{
     position: absolute;
-    width: 100px;
+    width: 400px;
     height: 30px;
-    top: 35px;
-    left: 200px;
-    display: block;
-    color: black;
-}
-.new img{
-    position: absolute;
-    width: 24px;
-    height: 24px;
-    top: 3px;
-    left: 0px;
+    top: 60px;
+    left: 300px;
     line-height: 30px;
+    text-align: left;
 }
-.new span{
+.repayalter_name{
     position: absolute;
-    top: 0;
-    left: 25px;
+    width: 400px;
+    height: 30px;
+    top: 150px;
+    left: 300px;
     line-height: 30px;
+    text-align: left;
+}
+.repayalter_member{
+    position: absolute;
+    width: 400px;
+    height: 30px;
+    top: 195px;
+    left: 300px;
+    line-height: 30px;
+    text-align: left;
+}
+.repayalter_money{
+    position: absolute;
+    width: 400px;
+    height: 30px;
+    top: 195px;
+    left: 300px;
+    line-height: 30px;
+    text-align: left;
 }
 
-.programList_content{
+.repayalter_state{
     position: absolute;
-    margin: 0;
-    padding-top: 10px;
-    width: 600px;
-    height: 200px;
-    background-color: white;
-    left: 200px;
-    overflow: auto;
+    width: 400px;
+    height: 30px;
+    top: 435px;
+    left: 300px;
+    line-height: 30px;
+    text-align: left;
 }
-.alter{
+.repayalter_button{
     position: absolute;
-    left: 450px;
+    width: 400px;
+    height: 30px;
+    top: 480px;
+    left: 300px;
+    line-height: 30px;
+    text-align: center;
 }
-.graph{
+.cancel{
     position: absolute;
-    left: 510px;
+    top: 480px;
+    left: 550px;
 }

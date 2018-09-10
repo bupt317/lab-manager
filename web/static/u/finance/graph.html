@@ -1,10 +1,112 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
 <head>
     <meta charset="UTF-8">
     <title>资金管理</title>
     <link rel="stylesheet" type="text/css" href="/lab-manager/web/static/css/u/finance/graph.css ">
+    <script th:src="@{/js/jquery-3.3.1.js}"></script>
+    <script>
+        function graph() {
+            data = "projectname="+window.sessionStorage.getItem("projectname");
+            money = [];
+            date = [];
+            var graph = document.getElementById("graph");
+            graph.width = 800;
+            graph.height = 460;
+            graph.style.border = "1px solid black";
+            var ctx = graph.getContext("2d");
 
+
+            $.ajax({
+                type: "post",
+                url: "/u/finance/enter_enter_seek",
+                contentType: "application/x-www-form-urlencoded;charset=utf-8",
+                data: data,
+                dataType: "text",
+                success: function (site) {
+                    if (site == "Y") {
+                        $.ajax({
+                            type: "post",
+                            url: "/u/finance／enter_enter_data",
+                            contentType: "application/x-www-form-urlencoded;charset=utf-8",
+                            data: {},
+                            dataType:'json',
+                            success: function (data) {
+                                $.each(data, function (i, val) {
+                                    money[i] = val.money;
+                                    date[i] = val.spenddate;
+                                });
+                                paintLine(money, "#f00")
+                            }
+                        });
+                    }
+                }
+            });
+
+            function paintLine(data, color) {
+                var maxMoney = Math.max.apply(null, data);
+                var padding = 50,
+                        x0 = padding,
+                        y0 = graph.height - padding,
+                        xArrow_x = padding,
+                        xArrow_y = padding,
+                        yArrow_x = graph.width - padding,
+                        yArrow_y = graph.height - padding,
+                        arrowWidth = 10,
+                        xLength = graph.width - 2*padding - arrowWidth,
+                        yLength = graph.height - 2*padding - arrowWidth,
+                        pointsWidth = xLength/(data.length + 1);
+
+                ctx.beginPath();
+
+                ctx.moveTo(x0, y0);
+                ctx.lineTo(xArrow_x, xArrow_y);
+                ctx.moveTo(xArrow_x, xArrow_y);
+                ctx.lineTo(xArrow_x - arrowWidth, xArrow_y + arrowWidth);
+                ctx.moveTo(xArrow_x, xArrow_y);
+                ctx.lineTo(xArrow_x + arrowWidth, xArrow_y + arrowWidth);
+
+                ctx.moveTo(x0, y0);
+                ctx.lineTo(yArrow_x, yArrow_y);
+                ctx.moveTo(yArrow_x, yArrow_y);
+                ctx.lineTo(yArrow_x - arrowWidth, yArrow_y - arrowWidth);
+                ctx.moveTo(yArrow_x, yArrow_y);
+                ctx.lineTo(yArrow_x - arrowWidth, yArrow_y + arrowWidth);
+
+                ctx.stroke();
+                ctx.beginPath();
+
+                for (var i = 0; i < data.length; i++) {
+                    var pointX = padding + (i + 1) * pointsWidth;
+                    var pointY = padding + arrowWidth + (1 - data[i]/maxMoney) * yLength;
+                    ctx.lineTo(pointX, pointY);
+                    var text = ctx.measureText(money[i]);
+                    ctx.fillText(money[i],pointX-text.width-5,pointY);
+                    var time = ctx.measureText(date[i]);
+                    ctx.fillText(date[i], pointX-20, 425);
+                }
+                ctx.strokeStyle = color;
+                ctx.stroke();
+            }
+
+        }
+
+        function back() {
+            window.sessionStorage.removeItem("projectname");
+            window.location.href='/u/finance／enter';
+        }
+
+        function clean() {
+            sessionStorage.clear();
+        }
+
+        function isSession() {
+            username = sessionStorage.getItem("Username");
+            if (username == null){
+                window.location.replace("/index")
+            }
+        }
+    </script>
 </head>
 <body>
 <div class="background">
@@ -29,13 +131,7 @@
 
     <div class="programList" id="List">
         <div class="programList_title">资金管理</div>
-        <div class="box1">
-            <a href="#">317财务管理系统</a>
-        </div>
-        </h1>
-
     <br><br>
-
     <div class="container">
         <div class="box2">
             <div class="box3">
@@ -49,12 +145,19 @@
             <div class="box5">
                 <a href="salary.html ">工资管理</a>
             </div>
-
+            <span>入账图表</span>
+            <a href="u/program_graph.html ">花销图表</a>
+            <div class="programgraph_flot" id="flot-placeholder">
+                <canvas id="graph"></canvas>
+            </div>
+            <div class="programgraph_button">
+                <button style="position: absolute; left: 100px">下载报表</button>
+                <button style="position: absolute; right: 100px" onclick="back()">返回</button>
+            </div>
         </div>
     </div>
 
     </div>
-</div>
 </div>
 </body>
 </html>
